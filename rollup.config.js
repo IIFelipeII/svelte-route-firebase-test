@@ -60,7 +60,9 @@ export default {
 
 		// In dev mode, call `npm run start` once
 		// the bundle has been generated
-		!production && serve(),
+
+		// !production && serve(),
+		postScript(production),
 
 		// Watch the `public` directory and refresh the
 		// browser on changes when not in production
@@ -73,4 +75,27 @@ export default {
 	watch: {
 		clearScreen: false
 	}
-};
+}
+function postScript(production) {
+	let started = false;
+	const sassTask = production ? 'build:sass' : 'watch:sass'
+ 
+	return {
+	  writeBundle() {
+		 if (!started) {
+			started = true;
+ 
+			if (!production)
+			  require('child_process').spawn('npm', ['run', 'start', '--', '--dev'], {
+				 stdio: ['ignore', 'inherit', 'inherit'],
+				 shell: true
+			  });
+ 
+			require('child_process').spawn('npm', ['run', sassTask], {
+			  stdio: ['ignore', 'inherit', 'inherit'],
+			  shell: true
+			});
+		 }
+	  }
+	};
+ }
