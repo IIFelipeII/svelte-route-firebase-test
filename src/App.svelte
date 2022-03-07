@@ -21,7 +21,6 @@
 		<h1>App</h1>
 		<Router>
 			<Navbar />
-
 			<Route path="/">
 				<Home></Home>
 			</Route>

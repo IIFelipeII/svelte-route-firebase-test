@@ -2,13 +2,13 @@ import firebase from 'firebase/app'
 import 'firebase/auth'
 
 var firebaseConfig = {
-    apiKey: "AIzaSyAtN_HzTK6TTFPMrB1db_IRhROkuRn2OnI",
-    authDomain: "abril-2021-1.firebaseapp.com",
-    projectId: "abril-2021-1",
-    storageBucket: "abril-2021-1.appspot.com",
-    messagingSenderId: "237667483185",
-    appId: "1:237667483185:web:432f79700dfcfe5e631f10"
-};
+    apiKey: "AIzaSyD1PhFGP7Vezk9CkZYKb9nE4bnPGsEa8Gk",
+    authDomain: "svelt-route-firebase.firebaseapp.com",
+    projectId: "svelt-route-firebase",
+    storageBucket: "svelt-route-firebase.appspot.com",
+    messagingSenderId: "918801293740",
+    appId: "1:918801293740:web:448a2c88183f8c552f1a09"
+  };
 // Initialize Firebase
 firebase.initializeApp(firebaseConfig);
 

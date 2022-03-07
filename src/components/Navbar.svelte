@@ -13,6 +13,7 @@
 <nav>
     {#if $user}
         <Link to="/perfil">Perfil</Link>
+        <Link to="/">Home</Link>
         <button on:click={cerrarSesion}>Cerrar Sesión</button>
     {:else}
         <Link to="/">Home</Link>
